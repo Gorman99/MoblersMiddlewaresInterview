@@ -13,6 +13,7 @@ builder.Services.AddSingleton<IRateLimitConfiguration, RateLimitConfiguration>()
 builder.Services.AddSingleton<IProcessingStrategy, AsyncKeyLockProcessingStrategy>();
 builder.Services.AddInMemoryRateLimiting();
 
+
 builder.Services.AddControllersWithViews()
     .AddNewtonsoftJson(options =>
     {
