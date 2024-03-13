@@ -36,11 +36,10 @@ if (app.Environment.IsDevelopment())
 
 app.ExceptionHandler();
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
 
 app.UseRequestLoggingMiddleware();
-
+app.UseCustomRateLimitMiddleware();
 app.MapControllers();
 
 app.Run();
