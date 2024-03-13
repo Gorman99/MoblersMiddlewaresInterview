@@ -34,3 +34,11 @@ public class CustomRateLimitMiddleware :IpRateLimitMiddleware
 
     }
 }
+
+public static class CustomRateLimitMiddlewareExtensions
+{
+    public static IApplicationBuilder UseCustomRateLimitMiddleware(this IApplicationBuilder builder)
+    {
+        return builder.UseMiddleware<CustomRateLimitMiddleware>();
+    }
+}
